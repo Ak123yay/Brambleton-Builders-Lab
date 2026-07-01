@@ -221,32 +221,6 @@ img {
   margin: 0 auto;
 }
 
-.program-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0 auto 24px;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: var(--paper);
-  color: var(--logo-navy);
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 9px 18px;
-  text-transform: uppercase;
-}
-
-.program-pill span {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--leaf-soft);
-  border-radius: 50%;
-  background: var(--leaf);
-}
-
 .hero-logo {
   width: min(450px, 78%);
   height: auto;
