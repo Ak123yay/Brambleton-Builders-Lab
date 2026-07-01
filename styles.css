@@ -97,6 +97,13 @@ img {
   line-height: 1;
 }
 
+.brand-logo {
+  width: 28px;
+  height: 20px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
 .brand-mark {
   width: 42px;
   height: 24px;
@@ -178,7 +185,7 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(70px, 7vw, 104px) clamp(18px, 4vw, 40px) clamp(72px, 7vw, 104px);
+  padding: clamp(56px, 7vw, 90px) clamp(18px, 4vw, 40px) clamp(70px, 7vw, 98px);
   text-align: center;
 }
 
@@ -214,76 +221,37 @@ img {
   margin: 0 auto;
 }
 
-.hero-logo {
-  position: relative;
+.program-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 0 auto 24px;
-  padding: 0;
-  color: var(--ink);
-}
-
-.hero-logo-mark {
-  width: 46px;
-  height: auto;
-  flex: 0 0 auto;
-}
-
-.hero-logo-copy {
-  position: relative;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 9px;
-  line-height: 1;
-  text-align: center;
-}
-
-.hero-logo-copy strong {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.hero-logo-copy span {
-  display: flex;
-  gap: 7px;
-  color: var(--accent-ink);
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  line-height: 1;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--logo-navy);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 9px 18px;
   text-transform: uppercase;
 }
 
-.hero-logo-copy b {
-  font-weight: inherit;
-}
-
-.hero-logo-copy b:last-child {
-  color: var(--logo-green);
-}
-
-.sun-mark {
-  position: absolute;
-  right: -14px;
-  top: -4px;
-  width: 8px;
-  height: 8px;
+.program-pill span {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--leaf-soft);
   border-radius: 50%;
-  background: var(--sun);
-  box-shadow:
-    0 -8px 0 -3.8px var(--sun),
-    0 8px 0 -3.8px var(--sun),
-    8px 0 0 -3.8px var(--sun),
-    -8px 0 0 -3.8px var(--sun),
-    6px 6px 0 -3.8px var(--sun),
-    -6px 6px 0 -3.8px var(--sun),
-    6px -6px 0 -3.8px var(--sun),
-    -6px -6px 0 -3.8px var(--sun);
+  background: var(--leaf);
+}
+
+.hero-logo {
+  width: min(450px, 78%);
+  height: auto;
+  margin: 0 auto 26px;
+  object-fit: contain;
 }
 
 .eyebrow {
@@ -310,9 +278,18 @@ h1 {
   font-size: clamp(50px, 5.8vw, 76px);
 }
 
+h1 span {
+  color: var(--logo-green);
+}
+
 h2 {
   max-width: 760px;
   font-size: clamp(38px, 5.1vw, 62px);
+}
+
+.section-heading h2 {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 h3 {
@@ -393,12 +370,12 @@ p {
   align-items: center;
   gap: 6px;
   border: 1px solid var(--rule);
-  border-radius: 100px;
+  border-radius: 8px;
   background: var(--paper);
   color: var(--ink-2);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 6px 11px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
 }
 
 .hero-stage {
@@ -866,16 +843,49 @@ p {
 
 .register-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.72fr);
-  gap: clamp(42px, 7vw, 96px);
+  grid-template-columns: minmax(280px, 420px) minmax(560px, 720px);
+  gap: clamp(36px, 5vw, 72px);
   align-items: start;
+  justify-content: center;
   border-top: 1px solid var(--rule-2);
   background: var(--paper-2);
+  text-align: left;
+}
+
+.register-copy {
+  max-width: 420px;
+}
+
+.register-copy h2 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.register-copy p {
+  max-width: 420px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.form-embed {
+  position: relative;
+  overflow: visible;
+  width: min(720px, 100%);
+  min-height: 1828px;
+  margin: 0;
+  background: transparent;
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  height: 1828px;
+  border: 0;
 }
 
 .register-copy .disclaimer {
-  max-width: 620px;
-  margin-top: 30px;
+  max-width: 420px;
+  margin: 30px 0 0;
   border: 1px solid color-mix(in oklab, var(--accent) 30%, var(--rule));
   border-radius: 6px;
   background: var(--accent-softer);
@@ -883,6 +893,36 @@ p {
   font-size: 13px;
   line-height: 1.5;
   padding: 16px 18px;
+}
+
+.contact-list {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  max-width: 420px;
+  margin: 22px 0 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--paper);
+  padding: 18px;
+}
+
+.contact-list h3 {
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+.contact-list a {
+  color: var(--logo-navy);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--logo-blue) 40%, transparent);
+  text-underline-offset: 4px;
+}
+
+.contact-list a:hover {
+  color: var(--logo-blue);
 }
 
 .interest-form {
@@ -1009,8 +1049,7 @@ p {
 @media (max-width: 1060px) {
   .preview-grid,
   .split-heading,
-  .demo-section,
-  .register-section {
+  .demo-section {
     grid-template-columns: 1fr;
   }
 
@@ -1028,6 +1067,36 @@ p {
   .rules-grid,
   .notice-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1180px) {
+  .register-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .register-copy,
+  .register-copy p,
+  .register-copy .disclaimer,
+  .contact-list {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .register-copy h2 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contact-list {
+    justify-items: center;
+  }
+
+  .form-embed {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -1068,41 +1137,12 @@ p {
   }
 
   .hero {
-    padding-top: 72px;
+    padding-top: 56px;
   }
 
   .hero-logo {
-    display: inline-flex;
-    justify-items: initial;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
-  .hero-logo-copy {
-    justify-items: initial;
-    text-align: left;
-  }
-
-  .hero-logo-copy span {
-    justify-content: flex-start;
-    gap: 7px;
-    letter-spacing: 0.18em;
-  }
-
-  .sun-mark {
-    top: -4px;
-    right: -14px;
-    width: 8px;
-    height: 8px;
-    box-shadow:
-      0 -8px 0 -3.8px var(--sun),
-      0 8px 0 -3.8px var(--sun),
-      8px 0 0 -3.8px var(--sun),
-      -8px 0 0 -3.8px var(--sun),
-      6px 6px 0 -3.8px var(--sun),
-      -6px 6px 0 -3.8px var(--sun),
-      6px -6px 0 -3.8px var(--sun),
-      -6px -6px 0 -3.8px var(--sun);
+    width: min(320px, 86%);
+    margin-bottom: 22px;
   }
 
   .browser-bar {
@@ -1153,24 +1193,13 @@ p {
     font-size: 15px;
   }
 
-  .brand-mark {
-    width: 42px;
-    height: 24px;
+  .brand-logo {
+    width: 26px;
+    height: 18px;
   }
 
   h1 {
-    font-size: clamp(44px, 13vw, 62px);
-  }
-
-  .hero-logo-copy strong {
-    font-size: 18px;
-  }
-
-  .hero-logo-copy span {
-    max-width: none;
-    flex-wrap: nowrap;
-    row-gap: 0;
-    letter-spacing: 0.16em;
+    font-size: clamp(40px, 12vw, 56px);
   }
 
   .preview-copy {

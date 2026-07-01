@@ -22,8 +22,9 @@ The program is designed as a free 6-week online program with guided build-alongs
 - Days: Wednesdays and Sundays
 - Time: 2:00 PM - 4:00 PM
 - Length: 6 weeks
-- Format: 12 interactive online sessions
-- Final event: planned in-person showcase
+- Format: 12 total sessions
+- Online sessions: 11 lessons/labs
+- Final event: planned in-person showcase / demo day
 
 ## What Students Will Learn
 
