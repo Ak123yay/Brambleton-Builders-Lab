@@ -61,6 +61,42 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const projectIdeas = [
+  {
+    title: "Personal website",
+    copy: "About, interests, projects, and contact sections with an optional theme toggle or project filter.",
+  },
+  {
+    title: "Club or nonprofit page",
+    copy: "Mission, events, resources, and contact sections with a FAQ accordion or signup interest mockup.",
+  },
+  {
+    title: "Study helper web app",
+    copy: "Notes, useful links, tips, and flashcards with a random flashcard or quiz feature.",
+  },
+  {
+    title: "Interactive JavaScript project",
+    copy: "A quiz, counter, quote generator, theme toggle, or small tool with clear user interaction.",
+  },
+  {
+    title: "Final showcase-ready project",
+    copy: "A polished beginner website or simple web app the student can present and explain.",
+  },
+];
+
+let projectIndex = 0;
+const projectButton = document.querySelector("#project-button");
+const projectTitle = document.querySelector("#project-title");
+const projectCopy = document.querySelector("#project-copy");
+
+if (projectButton && projectTitle && projectCopy) {
+  projectButton.addEventListener("click", () => {
+    projectIndex = (projectIndex + 1) % projectIdeas.length;
+    projectTitle.textContent = projectIdeas[projectIndex].title;
+    projectCopy.textContent = projectIdeas[projectIndex].copy;
+  });
+}
+
 document.querySelectorAll(".faq-item button").forEach((button) => {
   button.addEventListener("click", () => {
     const item = button.closest(".faq-item");

@@ -19,7 +19,7 @@ The program is designed as a free 6-week online program with guided build-alongs
 
 ## Planned Schedule
 
-- Days: Wednesdays and Sundays
+- Days: Tuesdays and Sundays
 - Time: 2:00 PM - 4:00 PM
 - Length: 6 weeks
 - Format: 12 total sessions
